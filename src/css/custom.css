@@ -100,7 +100,38 @@
    border: 1px solid #bad5ef !important;
    width: 100%;
  }
- 
- [css="accordion"] code{
-   background-color: unset;
- }
+
+  [data-theme='dark'] [css="accordion"] {
+  background-color: #1b1b1d;
+  border: 1px solid #2e3338 !important;
+}
+
+/* Improve visibility of tables and inline code inside accordions */
+[css="accordion"] table {
+  border-color: #bad5ef;
+}
+[css="accordion"] th,
+[css="accordion"] td {
+  border-color: #bad5ef;
+}
+
+[css="accordion"] code {
+  background-color: unset;
+  border: 1px solid #c7d9ee; /* light mode border for inline code tokens */
+  padding: 0.05rem 0.25rem;
+  border-radius: 4px;
+}
+
+/* Dark mode: lighter, more visible borders */
+[data-theme='dark'] [css="accordion"] table {
+  border-color: #5a6b7c;
+}
+[data-theme='dark'] [css="accordion"] th,
+[data-theme='dark'] [css="accordion"] td {
+  border-color: #5a6b7c;
+}
+
+[data-theme='dark'] [css="accordion"] code {
+  border: 1px solid #8a9bab; /* lighter border for visibility in dark mode */
+  color: #e6edf3;
+}
